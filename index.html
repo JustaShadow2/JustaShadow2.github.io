@@ -1,153 +1,249 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Arjun Atwal</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Rubik:wght@500;700&display=swap" rel="stylesheet">
-<style>
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  body {
-    font-family: 'Roboto', sans-serif;
-    font-size: 15px;
-    line-height: 26px;
-    color: #777777;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: #ffffff;
-  }
-
-  .landing-container {
-    text-align: center;
-    padding: 60px 20px;
-    max-width: 700px;
-    width: 100%;
-  }
-
-  .landing-container h1 {
-    font-family: 'Rubik', sans-serif;
-    font-weight: 700;
-    font-size: 52px;
-    color: #000000;
-    text-transform: uppercase;
-    margin-bottom: 12px;
-    line-height: 1.1;
-  }
-
-  .landing-container h2 {
-    font-family: 'Rubik', sans-serif;
-    font-weight: 500;
-    font-size: 20px;
-    color: #000000;
-    text-transform: uppercase;
-    margin-bottom: 30px;
-  }
-
-  .landing-container p {
-    font-size: 16px;
-    line-height: 28px;
-    color: #777777;
-    margin-bottom: 50px;
-    max-width: 520px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .btn-group {
-    display: flex;
-    gap: 24px;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .primary_btn {
-    display: inline-block;
-    color: #fff;
-    letter-spacing: 0px;
-    font-family: 'Rubik', sans-serif;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 50px;
-    outline: none;
-    text-align: center;
-    cursor: pointer;
-    text-transform: uppercase;
-    border-radius: 5px;
-    background-origin: border-box;
-    background-clip: content-box, border-box;
-    background-image: linear-gradient(to right, #4458dc 0%, #854fee 100%), radial-gradient(circle at top left, #4458dc, #854fee);
-    border: double 2px transparent;
-    box-shadow: 0px 10px 30px rgba(118, 85, 225, 0.3);
-    text-decoration: none;
-    padding: 0 42px;
-    transition: all 0.3s ease-in-out;
-  }
-
-  .primary_btn:hover {
-    background-image: linear-gradient(#ffffff, #ffffff), radial-gradient(circle at top left, #4458dc, #854fee);
-    border: 2px solid #854fee;
-    color: #222222;
-    box-shadow: none;
-    background-clip: border-box;
-  }
-
-  .primary_btn.tr-bg {
-    background-image: linear-gradient(#ffffff, #ffffff), radial-gradient(circle at top left, #4458dc, #854fee);
-    border: 2px solid transparent;
-    color: #222222;
-    box-shadow: none;
-  }
-
-  .primary_btn.tr-bg:hover {
-    background-image: linear-gradient(to right, #4458dc 0%, #854fee 100%), radial-gradient(circle at top left, #4458dc, #854fee);
-    border: double 2px transparent;
-    color: #ffffff;
-    box-shadow: 0px 10px 30px rgba(118, 85, 225, 0.3);
-  }
-
-  @media (max-width: 575px) {
-    .landing-container h1 {
-      font-size: 36px;
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Arjun Atwal</title>
+  <meta name="description" content="Arjun Atwal — software engineer building production systems across payments, biotech, geospatial, and generative AI.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #161311;
+      --ink: #ece6dc;
+      --ink-bright: #f7f1e8;
+      --muted: #b8ada0;
+      --faint: #8a7e72;
+      --line: rgba(236, 230, 220, 0.12);
+      --accent: #e0a45a;
+      --accent-dim: rgba(224, 164, 90, 0.12);
+      --spot: rgba(224, 164, 90, 0.14);
+      --font: "Inter", system-ui, sans-serif;
+      --ease: cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    .landing-container h2 {
-      font-size: 16px;
+    *, *::before, *::after { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: var(--font);
+      font-size: 1rem;
+      line-height: 1.7;
+      color: var(--muted);
+      background: var(--bg);
+      -webkit-font-smoothing: antialiased;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    body::before {
+      content: "";
+      pointer-events: none;
+      position: fixed;
+      inset: 0;
+      z-index: 30;
+      background: radial-gradient(
+        600px circle at var(--spot-x, 50%) var(--spot-y, 20%),
+        var(--spot),
+        transparent 80%
+      );
+    }
+
+    a {
+      color: var(--ink);
+      text-decoration: none;
+      transition: color 0.2s var(--ease);
+    }
+
+    a:hover { color: var(--accent); }
+
+    a:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+    }
+
+    h1, h2, h3 {
+      color: var(--ink-bright);
+      letter-spacing: -0.025em;
+      line-height: 1.2;
+      margin: 0;
+    }
+
+    p { margin: 0; }
+
+    .landing {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 4rem 1.5rem;
+      max-width: 600px;
+      width: 100%;
+    }
+
+    .landing h1 {
+      font-size: clamp(2.4rem, 5vw, 3.2rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      color: var(--ink-bright);
+      margin-bottom: 0.4rem;
+    }
+
+    .landing .role {
+      font-size: 1.15rem;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 1.5rem;
+    }
+
+    .landing .lede {
+      color: var(--muted);
+      max-width: 28rem;
+      margin: 0 auto 3rem;
+      font-size: 0.95rem;
     }
 
     .btn-group {
-      flex-direction: column;
-      align-items: center;
-      gap: 16px;
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
     }
 
-    .primary_btn {
-      padding: 0 32px;
-      font-size: 13px;
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.7rem 1.6rem;
+      border-radius: 0.4rem;
+      font-family: var(--font);
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      transition: background 0.2s var(--ease), color 0.2s var(--ease), box-shadow 0.2s var(--ease), border-color 0.2s var(--ease);
+      cursor: pointer;
     }
-  }
-</style>
+
+    .btn-primary {
+      background: var(--accent);
+      color: var(--bg);
+      border: 1px solid var(--accent);
+    }
+
+    .btn-primary:hover {
+      background: transparent;
+      color: var(--accent);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--ink);
+      border: 1px solid var(--line);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      box-shadow: 0 0 0 1px rgba(224, 164, 90, 0.08);
+    }
+
+    .btn svg {
+      width: 0.85rem;
+      height: 0.85rem;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 2;
+      transition: transform 0.2s var(--ease);
+    }
+
+    .btn:hover svg {
+      transform: translate(0.1rem, -0.1rem);
+    }
+
+    .socials {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.15rem;
+      margin-top: 3rem;
+      list-style: none;
+      padding: 0;
+    }
+
+    .socials a {
+      color: var(--faint);
+      display: flex;
+    }
+
+    .socials a:hover,
+    .socials a:focus-visible {
+      color: var(--ink-bright);
+    }
+
+    .socials svg {
+      width: 1.4rem;
+      height: 1.4rem;
+      fill: currentColor;
+    }
+
+    @media (max-width: 480px) {
+      .landing h1 { font-size: 2rem; }
+      .btn-group { flex-direction: column; align-items: center; }
+      .btn { width: 100%; justify-content: center; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      body::before { display: none; }
+    }
+  </style>
 </head>
 <body>
 
-<div class="landing-container">
+<div class="landing">
   <h1>Arjun Atwal</h1>
-  <h2>Software Engineer</h2>
-  <p>Systems that are measurable, resilient, and honest about their constraints — software you can test, ship, and still understand six months later.</p>
+  <p class="role">Software Engineer</p>
+  <p class="lede">I build production systems that hold under pressure — payments, biotech tooling, geospatial pipelines, and generative audio.</p>
   <div class="btn-group">
-    <a class="primary_btn" href="https://arjun-atwal.me/Personal-Website/">Personal Website</a>
-    <a class="primary_btn tr-bg" href="https://arjun-atwal.me/projects/">Projects</a>
+    <a class="btn btn-primary" href="https://arjun-atwal.me/Personal-Website/">
+      Personal Website <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+    </a>
+    <a class="btn btn-outline" href="https://arjun-atwal.me/projects/">
+      Projects <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+    </a>
   </div>
+  <ul class="socials">
+    <li>
+      <a href="https://github.com/JustaShadow2" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.6-4-1.6-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-6a4.7 4.7 0 0 1 1.2-3.2 4.3 4.3 0 0 1 .1-3.2s1-.3 3.3 1.2a11.4 11.4 0 0 1 6 0C16.8 4.7 17.8 5 17.8 5c.5 1.3.2 2.3.1 3.2a4.7 4.7 0 0 1 1.2 3.2c0 4.7-2.8 5.7-5.5 6 .4.3.8 1 .8 2.1v3.1c0 .3.2.7.8.6A12 12 0 0 0 12 .3Z"/></svg>
+      </a>
+    </li>
+    <li>
+      <a href="https://www.linkedin.com/in/arjun-atwal-852a90241/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 2h-17A1.5 1.5 0 0 0 2 3.5v17A1.5 1.5 0 0 0 3.5 22h17a1.5 1.5 0 0 0 1.5-1.5v-17A1.5 1.5 0 0 0 20.5 2ZM8 19H5v-9h3ZM6.5 8.4A1.7 1.7 0 1 1 8.2 6.7 1.7 1.7 0 0 1 6.5 8.4ZM19 19h-3v-4.7c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9V19H9v-9h2.9v1.3a3.2 3.2 0 0 1 2.9-1.6c3.1 0 3.7 2 3.7 4.7Z"/></svg>
+      </a>
+    </li>
+    <li>
+      <a href="mailto:atwalarjun@icloud.com" aria-label="Email">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5L4 8V6l8 5 8-5Z"/></svg>
+      </a>
+    </li>
+  </ul>
 </div>
 
+<script>
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (!reduceMotion) {
+    window.addEventListener("pointermove", (e) => {
+      document.body.style.setProperty("--spot-x", `${e.clientX}px`);
+      document.body.style.setProperty("--spot-y", `${e.clientY}px`);
+    }, { passive: true });
+  }
+</script>
 </body>
 </html>
