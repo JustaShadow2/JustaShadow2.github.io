@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Arjun Atwal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Rubik:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    line-height: 26px;
+    color: #777777;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+  }
+
+  .landing-container {
+    text-align: center;
+    padding: 60px 20px;
+    max-width: 700px;
+    width: 100%;
+  }
+
+  .landing-container h1 {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 700;
+    font-size: 52px;
+    color: #000000;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    line-height: 1.1;
+  }
+
+  .landing-container h2 {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: #000000;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  }
+
+  .landing-container p {
+    font-size: 16px;
+    line-height: 28px;
+    color: #777777;
+    margin-bottom: 50px;
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .btn-group {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .primary_btn {
+    display: inline-block;
+    color: #fff;
+    letter-spacing: 0px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 50px;
+    outline: none;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 5px;
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    background-image: linear-gradient(to right, #4458dc 0%, #854fee 100%), radial-gradient(circle at top left, #4458dc, #854fee);
+    border: double 2px transparent;
+    box-shadow: 0px 10px 30px rgba(118, 85, 225, 0.3);
+    text-decoration: none;
+    padding: 0 42px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .primary_btn:hover {
+    background-image: linear-gradient(#ffffff, #ffffff), radial-gradient(circle at top left, #4458dc, #854fee);
+    border: 2px solid #854fee;
+    color: #222222;
+    box-shadow: none;
+    background-clip: border-box;
+  }
+
+  .primary_btn.tr-bg {
+    background-image: linear-gradient(#ffffff, #ffffff), radial-gradient(circle at top left, #4458dc, #854fee);
+    border: 2px solid transparent;
+    color: #222222;
+    box-shadow: none;
+  }
+
+  .primary_btn.tr-bg:hover {
+    background-image: linear-gradient(to right, #4458dc 0%, #854fee 100%), radial-gradient(circle at top left, #4458dc, #854fee);
+    border: double 2px transparent;
+    color: #ffffff;
+    box-shadow: 0px 10px 30px rgba(118, 85, 225, 0.3);
+  }
+
+  @media (max-width: 575px) {
+    .landing-container h1 {
+      font-size: 36px;
+    }
+
+    .landing-container h2 {
+      font-size: 16px;
+    }
+
+    .btn-group {
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .primary_btn {
+      padding: 0 32px;
+      font-size: 13px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="landing-container">
+  <h1>Arjun Atwal</h1>
+  <h2>Software Engineer</h2>
+  <p>Systems that are measurable, resilient, and honest about their constraints — software you can test, ship, and still understand six months later.</p>
+  <div class="btn-group">
+    <a class="primary_btn" href="https://arjun-atwal.me/Personal-Website/">Personal Website</a>
+    <a class="primary_btn tr-bg" href="https://arjun-atwal.me/projects/">Projects</a>
+  </div>
+</div>
+
+</body>
+</html>
